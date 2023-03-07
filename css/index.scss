@@ -132,7 +132,7 @@ body{
                     border-radius: 100rem;
                     border-bottom: transparent;
                     position: absolute;
-                    animation: spinner 3s linear infinite;
+                    animation: spinner 3s  ease-in-out infinite;
                 }
                 #hidden-box{
                     top: 0;
@@ -141,7 +141,7 @@ body{
                     height: 0;
                     background-color: #747d8c;
                     position: absolute;
-                    animation: move-box1 1s linear ;
+                    animation: move-box1 1s ease-in-out ;
                     display: none;
                 }
             }
@@ -150,8 +150,14 @@ body{
             0%{
                 transform: rotate(0);
             }
-            100%{
+            40%{
                 transform: rotate(360deg);
+            }
+            60%{
+                transform: rotate(360deg);
+            }
+            100%{
+                transform: rotate(0);
             }
         }
         @keyframes move-box1{
